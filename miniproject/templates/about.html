@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+About
+{% endblock %}
+
+{% block content %} 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About Human's Care Hospital</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-image: url('/static/images/hd-wallpaper-2068283.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #f2f2f2;
+    }
+
+    .about-section {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .about-heading {
+      margin-bottom: 30px;
+    }
+    p{
+      font-size: larger;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 about-section">
+        <h2 class="about-heading">About Human's Care Hospital</h2>
+        <p>
+          Human's Care Hospital is a leading healthcare facility dedicated to providing exceptional medical services to our patients. With a team of experienced doctors, nurses, and staff, we strive to deliver comprehensive and compassionate care.
+        </p>
+        <p>
+          Our state-of-the-art hospital is equipped with modern medical technology to ensure accurate diagnoses and effective treatments. We offer a wide range of specialties, including cardiology, pediatrics, orthopedics, and more.
+        </p>
+        <p>
+          At Human's Care Hospital, we prioritize patient comfort and well-being. Our commitment to quality care and patient satisfaction sets us apart as a trusted healthcare provider in the community.
+        </p>
+        <p>
+          Contact us today to learn more about our services or to schedule an appointment. We look forward to serving you and your family's healthcare needs.
+        </p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+{% endblock %}

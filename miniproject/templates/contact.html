@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %} 
+Contact
+{% endblock %}
+
+{% block content %} 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Human's Care Hospital</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    .contact-section {
+      margin-top: 100px;
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .contact-heading {
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      margin-top: 30px;
+    }
+
+    .form-control {
+      width: 50%;
+      margin: 0 auto;
+    }
+
+    .submit-button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 contact-section">
+        <h2 class="contact-heading">Contact Human's Care Hospital</h2>
+
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        <p>Please use the form below to get in touch with us. We will respond to your message as soon as possible.</p>
+        <form class="contact-form" method="POST" action="{% url 'contact' %}">
+          {% csrf_token %}
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary submit-button">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+{% endblock %}
